@@ -1,6 +1,6 @@
 ## Nav
-- [Webpack](/webpack.com)
-- [Handlebars](/handlebars.com)
+- [Webpack](/webpack.md)
+- [Handlebars](/handlebars.md)
 
 ## TU - Start Project
 
