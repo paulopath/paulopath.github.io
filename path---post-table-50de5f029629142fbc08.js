@@ -1,2 +1,0 @@
-webpackJsonp([88323212479186],{"./node_modules/json-loader/index.js!./.cache/json/post-table.json":function(e,t){e.exports={data:{allMarkdownRemark:{edges:[{node:{frontmatter:{title:"Making the Moon go around the Earth",date:"2017-11-14",category:"WebGL"}}},{node:{frontmatter:{title:"Leaflet Library via ReactDOM",date:"2017-11-14",category:"React Plugins"}}}]}},pathContext:{}}}});
-//# sourceMappingURL=path---post-table-50de5f029629142fbc08.js.map
