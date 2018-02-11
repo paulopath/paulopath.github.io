@@ -1,13 +1,76 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Starting Over</title>
-</head>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/vuegal.css">
+    <style type="text/css">
+      .image {
+        float: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border: 1px solid #ebebeb;
+        margin: 5px;
+        }
+    </style>
+    
+  </head>
+  <body class="w3-black w3-padding w3-content">
 
-<body>
-  <h1>Hello...</h1>
-  <p>I love you, won't you tell me your name?</p>  
-</body>
+    <header class="w3-row-padding w3-opacity" style="background-size: cover; background-image: url('/assets/img/full/rose-collection13.jpg');">
+      <div class="w3-col m4 l3">
+        <img class="w3-margin-left w3-padding" src="assets/img/logos/z-soap2.svg" style="width:100%;max-width:400px;">
+      </div>
+      <div class="w3-col">
+        <h1>Zita Spa Gallery</h1>
+      </div>
+    </header>
+    <div class="w3-content w3-center" id="app">
+      <gallery :images="images" :index="index" @close="index = null"></gallery>
+      <div class="image" v-for="image, imageIndex in images" @click="index = imageIndex" :style="{ backgroundImage: 'url(' + image + ')', width: '300px', height: '200px' }"></div>
+    </div>
+    <script src="vuebundle.js"></script>
+    <script src="assets/js/vuegal.js"></script>
+    <script>new Vue({
+  el: '#app',
+  data: function () {
+    return {
+      images: [
+        
+        'assets/img/full/fullhearts1.jpg',
+        
+        'assets/img/full/fullhearts3.jpg',
+        
+        'assets/img/full/fullhexheart1.jpg',
+        
+        'assets/img/full/fullmellon1.jpg',
+        
+        'assets/img/full/fullmellon2.jpg',
+        
+        'assets/img/full/rose-collection3.jpg',
+        
+        'assets/img/full/rose-collection4.jpg',
+        
+        'assets/img/full/rose-collection12.jpg',
+        
+        'assets/img/full/rose-collection7.jpg',
+        
+        'assets/img/full/rose-collection8.jpg',
+        
+        'assets/img/full/rose-collection9.jpg',
+        
+        'assets/img/full/rose-collection10.jpg',
+        
+      ],
+      index: null
+    };
+  },
+
+  components: {
+    'gallery': VueGallery
+  }
+});
+</script> 
+  </body>
 </html>

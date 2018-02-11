@@ -1,0 +1,196 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
+  <title>Angelina's Z-Soap Index</title>
+
+  <script>
+
+  </script>
+
+</head>
+<body style="background-image: url('zsoap.svg'); background-repeat: no-repeat; background-position: center;">
+  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large"
+    onclick="w3_close()">Close &times;</button>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="changeView('xgal')">N-Soap</a>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="changeView('melgal')">Mellons</a>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="changeView('other')">More</a>
+  </div>
+
+  <div id="main">
+    <header class="w3-indigo w3-opacity">
+      <button id="openNav" class="w3-button w3-indigo w3-xlarge" onclick="w3_open()">&#9776;</button>
+
+      <div class="w3-container">
+        <h1>Z-Soap</h1>
+        <p>by Angelina Paiva</p>
+      </div>
+    </header>
+
+    <section class="stage w3-row">
+      <div id="xgal" class="w3-row-padding w3-margin-top" style="display: none;">
+         <div class="w3-third">
+           <div class="w3-card">
+             <img src="nsoap/hearts1.png" style="height:50%;cursor:pointer" onclick="openModal();currentDiv(1)" class="w3-hover-shadow">
+           </div>
+         </div>
+
+         <div class="w3-third">
+           <div class="w3-card">
+             <img src="nsoap/mellon2.JPG" style="height:50%;cursor:pointer" onclick="openModal();currentDiv(2)" class="w3-hover-shadow">
+           </div>
+         </div>
+
+         <div class="w3-third">
+           <div class="w3-card">
+             <img src="nsoap/hexheart1.JPG" style="height:50%;cursor:pointer" onclick="openModal();currentDiv(3)" class="w3-hover-shadow">
+           </div>
+         </div>
+      </div>
+
+      <div id="melgal" class="w3-row-padding w3-margin-top" style="display: none;">
+         <div class="w3-third">
+           <div class="w3-card">
+             <img src="nsoap/mellon1.JPG" style="height:50%;cursor:pointer" onclick="openModal();currentDiv(1)" class="w3-hover-shadow">
+           </div>
+         </div>
+
+         <div class="w3-third">
+           <div class="w3-card">
+             <img src="nsoap/mellon3.JPG" style="height:50%;cursor:pointer" onclick="openModal();currentDiv(2)" class="w3-hover-shadow">
+           </div>
+         </div>
+
+         <div class="w3-third">
+           <div class="w3-card">
+             <img src="nsoap/mellon2.JPG" style="height:50%;cursor:pointer" onclick="openModal();currentDiv(3)" class="w3-hover-shadow">
+           </div>
+         </div>
+      </div>
+                 
+      <div id="other" class="w3-row-padding w3-margin-top" style="display: none;">
+         <div class="w3-third">
+           <div class="w3-card">
+             <img src="nsoap/dougnut1.JPG" style="height:50%;cursor:pointer" onclick="openModal();currentDiv(1)" class="w3-hover-shadow">
+           </div>
+         </div>
+
+         <div class="w3-third">
+           <div class="w3-card">
+             <img src="nsoap/heartdougnut1.JPG" style="height:50%;cursor:pointer" onclick="openModal();currentDiv(2)" class="w3-hover-shadow">
+           </div>
+         </div>
+
+         <div class="w3-third">
+           <div class="w3-card">
+             <img src="nsoap/hex1.JPG" style="height:50%;cursor:pointer" onclick="openModal();currentDiv(3)" class="w3-hover-shadow">
+           </div>
+         </div>
+      </div>      
+                  
+      <div id="myModal" class="w3-modal w3-black">
+     <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright" onclick="closeModal()" style="cursor:pointer">×</span>
+     <div class="w3-modal-content">
+
+      <div class="w3-content w3-display-middle w3-margin-top" style="max-width:1200px">
+       <img class="mySlides w3-image w3-margin-top" src="nsoap/full/full-hearts3.JPG">
+       <img class="mySlides w3-image w3-margin-top" src="nsoap/full/full-hexheart1.JPG">
+       <img class="mySlides w3-image w3-margin-top" src="nsoap/full/full-mellon1.JPG">
+       <div class="w3-row w3-black w3-center">
+        <div class="w3-display-container">
+         <p id="caption"></p>
+         <span class="w3-display-left w3-btn" onclick="plusDivs(-1)">❮</span>
+         <span class="w3-display-right w3-btn" onclick="plusDivs(1)">❯</span>
+        </div>
+        <div class="w3-col s4">
+         <img class="demo w3-opacity w3-hover-opacity-off" src="nsoap/heartdougnut1.JPG" style="width:100%" onclick="currentDiv(1)" alt="Hearts on a surface">
+        </div>
+        <div class="w3-col s4">
+         <img class="demo w3-opacity w3-hover-opacity-off" src="nsoap/hex1.JPG" style="width:100%" onclick="currentDiv(2)" alt="Hexagons!">
+        </div>
+        <div class="w3-col s4">
+         <img class="demo w3-opacity w3-hover-opacity-off" src="nsoap/mellon1.JPG" style="width:100%" onclick="currentDiv(3)" alt="Mellons!">
+        </div>
+       </div> <!-- End row -->
+      </div> <!-- End w3-content -->
+
+     </div> <!-- End modal content -->
+    </div> <!-- End modal -->
+
+        
+    </section>
+    
+    <!-- w3 custom-scripts -->
+    <script>
+      function w3_open() {
+        document.getElementById("main").style.marginLeft = "15%";
+        document.getElementById("mySidebar").style.width = "15%";
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("openNav").style.display = 'none';
+      }
+      function w3_close() {
+        document.getElementById("main").style.marginLeft = "0%";
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("openNav").style.display = "inline-block";
+      }
+      
+      changeView("empty")
+      function changeView(stage) {
+          var i;
+          var x = document.getElementsByClassName("view");
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";
+          }
+          x = document.getElementsByClassName("test");
+          for (i = 0; i < x.length; i++) {
+             x[i].className = x[i].className.replace(" w3-light-grey", "");
+          }
+          document.getElementById(stage).style.display = "block";
+          event.currentTarget.className += " w3-light-grey";
+      }
+      
+      // Modal Gallery Section
+      function openModal() {
+        document.getElementById('myModal').style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById('myModal').style.display = "none";
+      }
+
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+
+      function currentDiv(n) {
+        showDivs(slideIndex = n);
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+           dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+
+        }
+        x[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " w3-opacity-off";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }      
+    </script>
+  </div>
+</body>
+</html>
